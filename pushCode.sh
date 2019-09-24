@@ -6,4 +6,6 @@ git clean -f
 
 git pull
 
+rm -rf /dist
+
 npm run build
