@@ -1,7 +1,9 @@
 cd /keclin/keclin_blog/
 
-git pull origin master
+git reset --hard origin/master
 
-npm install
+git clean -f
+
+git pull
 
 npm run build
