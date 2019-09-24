@@ -2,7 +2,7 @@ var http = require('http')
 var spawn = require('child_process').spawn
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({
-  path: '/zidongpush',
+  path: '/pushAction',
   secret: 'keclin712'
 })
 http.createServer(function (req, res) {
@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
     res.statusCode = 404;
     res.end('no such location')
   })
-}).listen(80)
+}).listen(3333)
 
 handler.on('error', function (err) {
   console.error('Error:', err.message)
